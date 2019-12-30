@@ -1,0 +1,53 @@
+class Animal:
+  def __init__(self,name,weight):
+    self.name = name
+    self.weight = weight
+
+class Cow(Animal):
+  def milk(self):
+    self.milk = True
+  def voice(self):
+    print("Му!")    
+Cow1 = Animal("Манька",210)
+class Sheep (Animal):
+  def milk(self):
+    self.milk = True
+  def voice(self):
+    print("Бе!")
+
+
+Sheep1 = Sheep("Барашек",53)
+Sheep2 = Sheep("Кудрявый",49)
+class Goat (Animal):
+  def wool(self):
+    self.wool = True
+  def voice(self):
+    print("Ме!")
+Goat1 = Goat("Рога",58)
+Goat2 = Goat("Копыта",57)
+
+class Bird(Animal):
+  def egg(self):
+    self.egg = True
+class Goose (Bird):
+  def voice(self):
+    print("Га!") 
+Goose1 = Goose("Белый", 3)
+Goose2 = Goose("Серый", 4)
+class Hen (Bird):
+  def voice(self):
+    print("Кудах!")
+Hen1 = Hen("Ко-ко", 1)
+Hen2 = Hen("Кукареку", 2)
+class Duck (Bird):
+  def voice(self):
+    print("Кря!")
+Duck1 = Duck("Кряква", 4)
+
+list_animal = [Cow1, Sheep1, Sheep2, Goat1, Goat2, Goose1, Goose2, Hen1, Hen2, Duck1]
+s = 0
+for i in list_animal:
+  if int(i.weight) > s:
+    s = int(i.weight)
+    b = i.name
+print ("Тяжелее всех", b)
